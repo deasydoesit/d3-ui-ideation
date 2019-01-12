@@ -1,7 +1,7 @@
 // External imports
 import React, { Component } from 'react';
 import * as d3 from 'd3';
-import { XYPlot, XAxis, YAxis, MarkSeries, Hint } from 'react-vis';
+import { FlexibleXYPlot, XAxis, YAxis, MarkSeries, Hint } from 'react-vis';
 import Waypoint from 'react-waypoint';
 
 // Internal imports
@@ -106,11 +106,11 @@ class BubbleGraph extends Component {
           <div>
             {this.state.year}
           </div>
-          <XYPlot
+          <FlexibleXYPlot
             margin={{ top:75, bottom:100, left:75}}
             onMouseLeave={() => this.setState({value: false})}
-            width={960}
-            height={600}
+            // width={960}
+            // height={600}
             yType='log'
             xType='log'
             xDomain={[15000, 10000000]}
@@ -143,7 +143,7 @@ class BubbleGraph extends Component {
               /> 
               : null
             }
-          </XYPlot>
+          </FlexibleXYPlot>
         </div>
 
         <div className='foo'>
